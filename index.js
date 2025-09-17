@@ -1,11 +1,7 @@
 const login = require("fca-unofficial");
+const appstate = require("./appstate.json");
 
-const credentials = {
-  email: "mullatusher5@gmail.com",
-  password: "dadavai@01"
-};
-
-login(credentials, (err, api) => {
+login({ appstate: appstate }, (err, api) => {
   if (err) return console.error(err);
 
   api.listen((err, message) => {
@@ -22,7 +18,7 @@ login(credentials, (err, api) => {
         } else {
           api.sendMessage("আমি তোমার কথা বুঝতে পারিনি, আবার বলো।", message.threadID);
         }
-      }, 2000); // 2000 milliseconds = 2 seconds
+      }, 2000);
     });
   });
 });
