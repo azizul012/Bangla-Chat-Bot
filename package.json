@@ -7,6 +7,6 @@
     "start": "node index.js"
   },
   "dependencies": {
-    "fb-chat-api": "^10.0.0"
+    "fca-unofficial": "^1.1.0"
   }
 }
