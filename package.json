@@ -1,0 +1,12 @@
+{
+  "name": "unofficial-fb-bot",
+  "version": "1.0.0",
+  "description": "An unofficial Facebook bot that chats in Bengali.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "fb-chat-api": "^10.0.0"
+  }
+}
