@@ -1,4 +1,4 @@
-const login = require("fb-chat-api");
+const login = require("fca-unofficial");
 
 const credentials = {
   email: "mullatusher5@gmail.com",
