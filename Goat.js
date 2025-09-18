@@ -1,10 +1,8 @@
-const login = require("fca-unofficial");
+const login = require("ws3-fca"); // এইখানে লাইব্রেরির নাম পরিবর্তন করা হয়েছে
 const fs = require("fs");
 
-// appstate.json ফাইল থেকে লগইন তথ্য লোড করুন
 const appstate = JSON.parse(fs.readFileSync('appstate.json', 'utf8'));
 
-// অ্যাপস্টেট ব্যবহার করে লগইন
 login({ appState: appstate }, (err, api) => {
   if (err) {
     console.error("Login failed:", err);
@@ -17,11 +15,9 @@ login({ appState: appstate }, (err, api) => {
   api.listen((err, message) => {
     if (err) return console.error(err);
 
-    // টাইপিং স্ট্যাটাস চালু করুন
     api.sendTypingIndicator(message.threadID, (err) => {
       if (err) return console.error(err);
 
-      // 2 সেকেন্ড অপেক্ষা করুন যাতে মানুষের মতো মনে হয়
       setTimeout(() => {
         if (message.body === "কেমন আছো?") {
           api.sendMessage("আমি ভালো আছি, তুমি কেমন আছো?", message.threadID);
@@ -32,7 +28,7 @@ login({ appState: appstate }, (err, api) => {
         } else {
           api.sendMessage("আমি তোমার কথা বুঝতে পারিনি, আবার বলো।", message.threadID);
         }
-      }, 2000); // 2000 milliseconds = 2 seconds
+      }, 2000);
     });
   });
 });
