@@ -17,11 +17,11 @@ app.listen(PORT, () => {
 // === Start the Goat bot process ===
 function startProject() {
     // appstate.json ফাইল থেকে অ্যাপস্টেট লোড করার চেষ্টা করুন
-    let appState = null;
+    let login = null;
     try {
-        appState = JSON.parse(fs.readFileSync('appstate.json', 'utf8'));
+        appState = JSON.parse(fs.readFileSync('login.js', 'utf8'));
     } catch (err) {
-        console.error("Error loading appstate.json file:", err);
+        console.error("Error loading login.js file:", err);
         return; // appstate ফাইল না পেলে বট রান করা বন্ধ করুন
     }
 
