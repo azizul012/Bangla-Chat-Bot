@@ -1,6 +1,7 @@
-const login = require("ws3-fca"); // এইখানে লাইব্রেরির নাম পরিবর্তন করা হয়েছে
+const login = require("ws3-fca");
 const fs = require("fs");
 
+// appstate.json ফাইল থেকে লগইন তথ্য লোড করুন
 const appstate = JSON.parse(fs.readFileSync('appstate.json', 'utf8'));
 
 login({ appState: appstate }, (err, api) => {
