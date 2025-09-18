@@ -2,8 +2,9 @@ const login = require("fca-unofficial");
 const fs = require("fs");
 
 const credentials = {
-  email: "",
-  password: "আপনার_পাসওয়ার্ড_এখানে"
+  email: "
+mullatusher5@gmail.com",
+  password: "dadavai#01"
 };
 
 login(credentials, (err, api) => {
