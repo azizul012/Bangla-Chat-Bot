@@ -3,7 +3,7 @@ const fs = require("fs");
 
 const credentials = {
   email: "mullatusher5@gmail.com",
-  password: "dadavai#01"
+  password: "dadavai\#01"
 };
 
 login(credentials, (err, api) => {
