@@ -19,7 +19,173 @@ function startProject() {
     // appstate.json ফাইল থেকে অ্যাপস্টেট লোড করার চেষ্টা করুন
     let login = null;
     try {
-        appState = JSON.parse(fs.readFileSync('login.js', 'utf8'));
+        appState = JSON.parse(fs.readFileSync('appstate.json'utf8'));
+    } catch (err) {
+        console.error("Error appstate.json);
+        return; // appstate ফাইল না পেলে বট রান করা বন্ধ করুন
+    }
+
+    const child = spawn("node", ["Goat.js"], {
+        cwd: __dirname,
+        stdio: "inherit",
+        shell: true
+    });
+
+    child.on("close", (code) => {
+        console.log(`Child process exited with code ${code}.`);
+        if (code !== 0) {
+            console.log("Restarting the bot...");
+            startProject();
+        }
+    });
+
+    child.on("error", (error) => {
+        console.error("Failed to start child process:", error);
+    });
+}
+
+startProject();
+
+
+startProject();
+state.json);
+        return; // appstate ফাইল না পেলে বট রান করা বন্ধ করুন
+    }
+
+    const child = spawn("node", ["Goat.js"], {
+        cwd: __dirname,
+        stdio: "inherit",
+        shell: true
+    });
+
+    child.on("close", (code) => {
+        console.log(`Child process exited with code ${code}.`);
+        if (code !== 0) {
+            console.log("Restarting the bot...");
+            startProject();
+        }
+    });
+
+    child.on("error", (error) => {
+        console.error("Failed to start child process:", error);
+    });
+}
+
+startProject();
+
+
+startProject();
+nappstate.jsonjs);
+        return; // appstate ফাইল না পেলে বট রান করা বন্ধ করুন
+    }
+
+    const child = spawn("node", ["Goat.js"], {
+        cwd: __dirname,
+        stdio: "inherit",
+        shell: true
+    });
+
+    child.on("close", (code) => {
+        console.log(`Child process exited with code ${code}.`);
+        if (code !== 0) {
+            console.log("Restarting the bot...");
+            startProject();
+        }
+    });
+
+    child.on("error", (error) => {
+        console.error("Failed to start child process:", error);
+    });
+}
+
+startProject();
+
+
+startProject();
+ err);
+        return; // appstate ফাইল না পেলে বট রান করা বন্ধ করুন
+    }
+
+    const child = spawn("node", ["Goat.js"], {
+        cwd: __dirname,
+        stdio: "inherit",
+        shell: true
+    });
+
+    child.on("close", (code) => {
+        console.log(`Child process exited with code ${code}.`);
+        if (code !== 0) {
+            console.log("Restarting the bot...");
+            startProject();
+        }
+    });
+
+    child.on("error", (error) => {
+        console.error("Failed to start child process:", error);
+    });
+}
+
+startProject();
+
+
+startProject();
+ file:", err);
+        return; // appstate ফাইল না পেলে বট রান করা বন্ধ করুন
+    }
+
+    const child = spawn("node", ["Goat.js"], {
+        cwd: __dirname,
+        stdio: "inherit",
+        shell: true
+    });
+
+    child.on("close", (code) => {
+        console.log(`Child process exited with code ${code}.`);
+        if (code !== 0) {
+            console.log("Restarting the bot...");
+            startProject();
+        }
+    });
+
+    child.on("error", (error) => {
+        console.error("Failed to start child process:", error);
+    });
+}
+
+startProject();
+
+
+startProject();
+utf8'));
+    } catch (err) {
+        console.error("Error loading login.js file:", err);
+        return; // appstate ফাইল না পেলে বট রান করা বন্ধ করুন
+    }
+
+    const child = spawn("node", ["Goat.js"], {
+        cwd: __dirname,
+        stdio: "inherit",
+        shell: true
+    });
+
+    child.on("close", (code) => {
+        console.log(`Child process exited with code ${code}.`);
+        if (code !== 0) {
+            console.log("Restarting the bot...");
+            startProject();
+        }
+    });
+
+    child.on("error", (error) => {
+        console.error("Failed to start child process:", error);
+    });
+}
+
+startProject();
+
+
+startProject();
+, 'utf8'));
     } catch (err) {
         console.error("Error loading login.js file:", err);
         return; // appstate ফাইল না পেলে বট রান করা বন্ধ করুন
