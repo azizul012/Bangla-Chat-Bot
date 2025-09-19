@@ -4,7 +4,6 @@
 
 const express = require("express");
 const { spawn } = require("child_process");
-const log = require("./logger/log.js");
 
 // === Express server to keep Render service alive ===
 const app = express();
